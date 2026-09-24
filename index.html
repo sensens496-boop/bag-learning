@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="包学堂——面向箱包从业者的材料、结构、工艺、品质、日语和客户实务知识库。">
+  <title>包学堂｜箱包行业知识库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M12 13V9.5C12 5.9 14.8 3 18.3 3h3.4C25.2 3 28 5.9 28 9.5V13"/><rect x="5" y="12" width="30" height="24" rx="7"/><path d="M5 22h30M14 19v6M26 19v6"/></svg>
+        </span>
+        <span>包学堂<small>BAG KNOWLEDGE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a class="active" href="#top">学习首页</a>
+        <a href="#knowledge">知识库</a>
+        <a href="#terms">术语表</a>
+        <a href="#cases">实务案例</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchFocus" aria-label="搜索"><span>⌕</span></button>
+        <button class="avatar" aria-label="个人中心">学习者</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> 从零开始，系统掌握箱包知识</span>
+          <h1>读懂一只包的<br><em>每一个细节</em></h1>
+          <p>从材料识别到生产工艺，从品质管理到日本客户沟通。<br>一站式构建你的箱包行业知识体系。</p>
+          <div class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <label class="sr-only" for="globalSearch">搜索知识点</label>
+            <input id="globalSearch" type="search" placeholder="搜索材料、工艺、术语或案例…" autocomplete="off">
+            <kbd>ENTER</kbd>
+          </div>
+          <div class="quick-tags"><span>热门搜索</span><button data-query="PU皮">PU皮</button><button data-query="车缝">车缝工艺</button><button data-query="検品">検品</button><button data-query="色差">色差处理</button></div>
+        </div>
+        <div class="hero-visual" aria-label="箱包结构示意图">
+          <div class="visual-label label-a"><b>01</b><span>面料<br><small>FABRIC</small></span></div>
+          <div class="visual-label label-b"><b>02</b><span>五金<br><small>HARDWARE</small></span></div>
+          <div class="visual-label label-c"><b>03</b><span>里料<br><small>LINING</small></span></div>
+          <div class="bag-wrap">
+            <svg class="bag-art" viewBox="0 0 440 410" role="img" aria-label="手提包线稿插画">
+              <path class="bag-shadow" d="M68 354c57-21 257-22 310 0-59 27-247 28-310 0Z"/>
+              <path class="bag-handle" d="M146 135C148 64 172 28 221 28s76 38 76 107"/>
+              <path class="bag-handle inner" d="M172 136c2-49 18-76 49-76s48 27 50 76"/>
+              <path class="bag-body" d="M78 131c4-15 17-23 35-24l214 1c20 0 31 9 35 27l30 199c3 21-9 33-30 35H77c-21-2-32-16-27-38l28-200Z"/>
+              <path class="bag-panel" d="M114 107c-6 69-11 153-17 261M327 108c7 72 13 159 18 260"/>
+              <path class="bag-top" d="M79 132c85 14 196 14 282 1M99 153c77 12 168 12 244 0"/>
+              <path class="bag-pocket" d="M146 207h149v91c-39 28-108 31-149 1v-92Z"/>
+              <path class="bag-detail" d="M160 224c35 10 85 10 121 0M220 233v59"/>
+              <circle cx="220" cy="253" r="5"/>
+              <path class="stitch" d="M122 173c65 8 132 8 197 0M125 188c63 7 127 7 190 0"/>
+            </svg>
+          </div>
+          <div class="corner-note">BAG ANATOMY<br><b>NO. 001</b></div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="学习数据">
+        <div><strong>06</strong><span>核心模块<small>CORE MODULES</small></span></div>
+        <div><strong>48<sup>+</sup></strong><span>知识主题<small>KNOWLEDGE TOPICS</small></span></div>
+        <div><strong>120<sup>+</sup></strong><span>行业术语<small>INDUSTRY TERMS</small></span></div>
+        <div><strong>24</strong><span>实务案例<small>PRACTICAL CASES</small></span></div>
+      </section>
+
+      <section class="knowledge-section" id="knowledge">
+        <div class="section-heading">
+          <div><span class="eyebrow"><i></i> KNOWLEDGE SYSTEM</span><h2>六大核心知识模块</h2><p>循序渐进，从基础认知到实务应用</p></div>
+          <div class="filter-tabs" role="group" aria-label="知识分类筛选">
+            <button class="active" data-filter="all">全部</button><button data-filter="基础">基础</button><button data-filter="制造">制造</button><button data-filter="实务">实务</button>
+          </div>
+        </div>
+        <div class="module-grid">
+          <article class="module-card featured" data-category="基础" data-search="箱包材料 PU PVC 尼龙 帆布 真皮 里料">
+            <div class="module-top"><span class="module-no">01 / MATERIAL</span><span class="module-icon">▧</span></div>
+            <h3>箱包材料</h3><p>认识面料、里料、辅料与五金，掌握特性、用途及鉴别方法。</p>
+            <div class="chips"><span>PU / PVC</span><span>尼龙</span><span>帆布</span><span>真皮</span></div>
+            <button class="card-link" data-modal="materials">开始学习 <b>→</b></button>
+            <div class="mini-swatch" aria-hidden="true"><i></i><i></i><i></i></div>
+          </article>
+          <article class="module-card" data-category="基础" data-search="箱包结构 包身 袋口 肩带 口袋 包边">
+            <div class="module-top"><span class="module-no">02 / STRUCTURE</span><span class="module-icon">⌑</span></div>
+            <h3>箱包结构</h3><p>拆解包身、袋口、肩带及内部组织，读懂纸格与结构图。</p>
+            <div class="chips"><span>包身</span><span>袋口</span><span>肩带</span></div>
+            <button class="card-link" data-modal="structure">开始学习 <b>→</b></button>
+          </article>
+          <article class="module-card" data-category="制造" data-search="生产工艺 开料 铲皮 车缝 油边 组装">
+            <div class="module-top"><span class="module-no">03 / PROCESS</span><span class="module-icon">⚙</span></div>
+            <h3>生产工艺</h3><p>从开料到包装，了解完整生产流程与各工序控制要点。</p>
+            <div class="chips"><span>开料</span><span>车缝</span><span>油边</span></div>
+            <button class="card-link" data-modal="process">开始学习 <b>→</b></button>
+          </article>
+          <article class="module-card warning" data-category="制造" data-search="常见质量问题 色差 断线 油边 起皱 检品">
+            <div class="module-top"><span class="module-no">04 / QUALITY</span><span class="module-icon">△</span></div>
+            <h3>常见质量问题</h3><p>识别外观与功能缺陷，学习原因分析、判定标准和改善方法。</p>
+            <div class="chips"><span>色差</span><span>断线</span><span>油边</span></div>
+            <button class="card-link" data-modal="quality">开始学习 <b>→</b></button>
+          </article>
+          <article class="module-card dark" id="terms" data-category="实务" data-search="箱包日语术语 生地 裏地 縫製 検品 サンプル">
+            <div class="module-top"><span class="module-no">05 / JAPANESE</span><span class="module-icon">あ</span></div>
+            <h3>箱包日语术语</h3><p>覆盖材料、部位、工艺与验货的高频日语，附读音和使用场景。</p>
+            <div class="term-preview"><span><b>生地</b><small>きじ / 面料</small></span><span><b>縫製</b><small>ほうせい / 缝制</small></span><span><b>検品</b><small>けんぴん / 验货</small></span></div>
+            <button class="card-link" data-modal="japanese">查看术语表 <b>→</b></button>
+          </article>
+          <article class="module-card case-card" id="cases" data-category="实务" data-search="日本客户 实际案例 交期 色差 样品 规格 沟通">
+            <div class="module-top"><span class="module-no">06 / CASE STUDY</span><span class="module-icon">↗</span></div>
+            <h3>日本客户实务案例</h3><p>用真实业务场景，学习问题确认、专业回复与持续改善。</p>
+            <div class="case-preview"><b>CASE 07</b><span>大货颜色与确认样存在偏差，客户要求说明…</span></div>
+            <button class="card-link" data-modal="cases">查看处理方式 <b>→</b></button>
+          </article>
+        </div>
+        <div class="empty-state" hidden><b>没有找到相关内容</b><span>换个关键词试试看吧</span></div>
+      </section>
+
+      <section class="learning-path">
+        <div><span class="eyebrow light"><i></i> START HERE</span><h2>不知道从哪里开始？</h2><p>建议先建立材料与结构基础，再逐步进入生产、品质及客户实务。</p></div>
+        <ol>
+          <li><b>1</b><span>认识材料<small>了解基础属性</small></span></li>
+          <li><b>2</b><span>读懂结构<small>掌握专业部位</small></span></li>
+          <li><b>3</b><span>走进生产<small>理解制造流程</small></span></li>
+          <li><b>4</b><span>投入实务<small>解决真实问题</small></span></li>
+        </ol>
+      </section>
+
+      <section class="notes-section">
+        <div class="note-copy"><span class="eyebrow"><i></i> LEARNING NOTES</span><h2>把知识，变成自己的经验</h2><p>记录今天遇到的问题、学到的术语，持续构建你的行业知识库。</p><button id="newNote">＋ 新建学习笔记</button></div>
+        <div class="note-card"><div class="note-meta"><span>我的最近笔记</span><time id="noteDate"></time></div><textarea id="noteText" aria-label="学习笔记" placeholder="写下今天学到的内容…">油边常见问题：爆边、起泡、不均匀。需要确认底油是否干透，以及油边次数和每层厚度。</textarea><div class="note-footer"><span id="saveStatus">已自动保存</span><button id="saveNote">保存笔记</button></div></div>
+      </section>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">包</span><span>包学堂<small>BAG KNOWLEDGE</small></span></div><p>专注箱包行业知识整理与经验传承</p><span>© 2026 包学堂 · KEEP LEARNING</span></footer>
+  </div>
+
+  <dialog id="lessonModal">
+    <div class="modal-head"><span id="modalIndex">LESSON</span><button id="closeModal" aria-label="关闭">×</button></div>
+    <div id="modalContent"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status">笔记已保存</div>
+  <script src="script.js"></script>
+</body>
+</html>
