@@ -24,7 +24,7 @@
       </nav>
       <div class="header-actions">
         <button class="icon-button" id="searchFocus" aria-label="搜索"><span>⌕</span></button>
-        <button class="avatar" aria-label="个人中心">学习者</button>
+        <button class="avatar" id="profileButton" aria-label="打开学习中心">学习者</button>
       </div>
     </header>
 
@@ -40,6 +40,7 @@
             <input id="globalSearch" type="search" placeholder="搜索材料、工艺、术语或案例…" autocomplete="off">
             <kbd>ENTER</kbd>
           </div>
+          <div class="search-results" id="searchResults" role="listbox" aria-label="搜索结果" hidden></div>
           <div class="quick-tags"><span>热门搜索</span><button data-query="PU皮">PU皮</button><button data-query="车缝">车缝工艺</button><button data-query="検品">検品</button><button data-query="色差">色差处理</button></div>
         </div>
         <div class="hero-visual" aria-label="箱包结构示意图">
@@ -79,38 +80,38 @@
           </div>
         </div>
         <div class="module-grid">
-          <article class="module-card featured" data-category="基础" data-search="箱包材料 PU PVC 尼龙 帆布 真皮 里料">
+          <article class="module-card featured" tabindex="0" role="button" aria-label="进入箱包材料" data-module="materials" data-category="基础" data-search="箱包材料 PU PVC 尼龙 帆布 真皮 里料">
             <div class="module-top"><span class="module-no">01 / MATERIAL</span><span class="module-icon">▧</span></div>
             <h3>箱包材料</h3><p>认识面料、里料、辅料与五金，掌握特性、用途及鉴别方法。</p>
-            <div class="chips"><span>PU / PVC</span><span>尼龙</span><span>帆布</span><span>真皮</span></div>
+            <div class="chips"><button data-entry="PU / PVC">PU / PVC</button><button data-entry="尼龙">尼龙</button><button data-entry="帆布">帆布</button><button data-entry="真皮">真皮</button></div>
             <button class="card-link" data-modal="materials">开始学习 <b>→</b></button>
             <div class="mini-swatch" aria-hidden="true"><i></i><i></i><i></i></div>
           </article>
-          <article class="module-card" data-category="基础" data-search="箱包结构 包身 袋口 肩带 口袋 包边">
+          <article class="module-card" tabindex="0" role="button" aria-label="进入箱包结构" data-module="structure" data-category="基础" data-search="箱包结构 包身 袋口 肩带 口袋 包边">
             <div class="module-top"><span class="module-no">02 / STRUCTURE</span><span class="module-icon">⌑</span></div>
             <h3>箱包结构</h3><p>拆解包身、袋口、肩带及内部组织，读懂纸格与结构图。</p>
-            <div class="chips"><span>包身</span><span>袋口</span><span>肩带</span></div>
+            <div class="chips"><button data-entry="包身">包身</button><button data-entry="袋口">袋口</button><button data-entry="肩带">肩带</button></div>
             <button class="card-link" data-modal="structure">开始学习 <b>→</b></button>
           </article>
-          <article class="module-card" data-category="制造" data-search="生产工艺 开料 铲皮 车缝 油边 组装">
+          <article class="module-card" tabindex="0" role="button" aria-label="进入生产工艺" data-module="process" data-category="制造" data-search="生产工艺 开料 铲皮 车缝 油边 组装">
             <div class="module-top"><span class="module-no">03 / PROCESS</span><span class="module-icon">⚙</span></div>
             <h3>生产工艺</h3><p>从开料到包装，了解完整生产流程与各工序控制要点。</p>
-            <div class="chips"><span>开料</span><span>车缝</span><span>油边</span></div>
+            <div class="chips"><button data-entry="开料与备料">开料</button><button data-entry="车缝组装">车缝</button><button data-entry="台面加工">油边</button></div>
             <button class="card-link" data-modal="process">开始学习 <b>→</b></button>
           </article>
-          <article class="module-card warning" data-category="制造" data-search="常见质量问题 色差 断线 油边 起皱 检品">
+          <article class="module-card warning" tabindex="0" role="button" aria-label="进入常见质量问题" data-module="quality" data-category="制造" data-search="常见质量问题 色差 断线 油边 起皱 检品">
             <div class="module-top"><span class="module-no">04 / QUALITY</span><span class="module-icon">△</span></div>
             <h3>常见质量问题</h3><p>识别外观与功能缺陷，学习原因分析、判定标准和改善方法。</p>
-            <div class="chips"><span>色差</span><span>断线</span><span>油边</span></div>
+            <div class="chips"><button data-entry="色差">色差</button><button data-entry="线迹不良">断线</button><button data-entry="油边问题">油边</button></div>
             <button class="card-link" data-modal="quality">开始学习 <b>→</b></button>
           </article>
-          <article class="module-card dark" id="terms" data-category="实务" data-search="箱包日语术语 生地 裏地 縫製 検品 サンプル">
+          <article class="module-card dark" tabindex="0" role="button" aria-label="进入箱包日语术语" data-module="japanese" id="terms" data-category="实务" data-search="箱包日语术语 生地 裏地 縫製 検品 サンプル">
             <div class="module-top"><span class="module-no">05 / JAPANESE</span><span class="module-icon">あ</span></div>
             <h3>箱包日语术语</h3><p>覆盖材料、部位、工艺与验货的高频日语，附读音和使用场景。</p>
-            <div class="term-preview"><span><b>生地</b><small>きじ / 面料</small></span><span><b>縫製</b><small>ほうせい / 缝制</small></span><span><b>検品</b><small>けんぴん / 验货</small></span></div>
+            <div class="term-preview"><button data-entry="生地"><b>生地</b><small>きじ / 面料</small></button><button data-entry="縫製"><b>縫製</b><small>ほうせい / 缝制</small></button><button data-entry="検品"><b>検品</b><small>けんぴん / 验货</small></button></div>
             <button class="card-link" data-modal="japanese">查看术语表 <b>→</b></button>
           </article>
-          <article class="module-card case-card" id="cases" data-category="实务" data-search="日本客户 实际案例 交期 色差 样品 规格 沟通">
+          <article class="module-card case-card" tabindex="0" role="button" aria-label="进入日本客户实务案例" data-module="cases" id="cases" data-category="实务" data-search="日本客户 实际案例 交期 色差 样品 规格 沟通">
             <div class="module-top"><span class="module-no">06 / CASE STUDY</span><span class="module-icon">↗</span></div>
             <h3>日本客户实务案例</h3><p>用真实业务场景，学习问题确认、专业回复与持续改善。</p>
             <div class="case-preview"><b>CASE 07</b><span>大货颜色与确认样存在偏差，客户要求说明…</span></div>
@@ -123,10 +124,10 @@
       <section class="learning-path">
         <div><span class="eyebrow light"><i></i> START HERE</span><h2>不知道从哪里开始？</h2><p>建议先建立材料与结构基础，再逐步进入生产、品质及客户实务。</p></div>
         <ol>
-          <li><b>1</b><span>认识材料<small>了解基础属性</small></span></li>
-          <li><b>2</b><span>读懂结构<small>掌握专业部位</small></span></li>
-          <li><b>3</b><span>走进生产<small>理解制造流程</small></span></li>
-          <li><b>4</b><span>投入实务<small>解决真实问题</small></span></li>
+          <li><button data-modal="materials"><b>1</b><span>认识材料<small>了解基础属性</small></span></button></li>
+          <li><button data-modal="structure"><b>2</b><span>读懂结构<small>掌握专业部位</small></span></button></li>
+          <li><button data-modal="process"><b>3</b><span>走进生产<small>理解制造流程</small></span></button></li>
+          <li><button data-modal="cases"><b>4</b><span>投入实务<small>解决真实问题</small></span></button></li>
         </ol>
       </section>
 
@@ -140,9 +141,10 @@
   </div>
 
   <dialog id="lessonModal">
-    <div class="modal-head"><span id="modalIndex">LESSON</span><button id="closeModal" aria-label="关闭">×</button></div>
+    <div class="modal-head"><div><button id="modalBack" class="modal-back" aria-label="返回上一层" hidden>← 返回上一层</button><span id="modalIndex">LESSON</span></div><button id="closeModal" aria-label="关闭">×</button></div>
     <div id="modalContent"></div>
   </dialog>
+  <button class="home-fab" id="homeButton" aria-label="返回首页">↑ <span>返回首页</span></button>
   <div class="toast" id="toast" role="status">笔记已保存</div>
   <script src="script.js"></script>
 </body>
